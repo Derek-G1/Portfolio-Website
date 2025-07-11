@@ -119,6 +119,7 @@ const App = () => {
       title: blockGuardProject.title,
       description: blockGuardProject.description,
       url: "Blockguard.app", // Updated to Blockguard.app
+      playStoreUrl: "https://play.google.com/store/apps/details?id=com.radstormtech.blockguard", // Google Play Store link
       tags: ["Android Development", "Mobile App", "Kotlin", "Jetpack Compose"], // Example tags for Block Guard
       icon: "Globe" // Using Globe for a general app icon
     }
@@ -297,6 +298,16 @@ const App = () => {
                       >
                         <Globe className="w-4 h-4" />
                         <span>{project.url}</span>
+                      </a>
+                    )}
+                    {project.playStoreUrl && (
+                      <a
+                        href={project.playStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors mt-2"
+                      >
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" className="w-24 h-auto" />
                       </a>
                     )}
                   </div>
